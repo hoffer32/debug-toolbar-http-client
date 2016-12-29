@@ -1,0 +1,8 @@
+Collecting django-debug-toolbar
+  Downloading django_debug_toolbar-1.6-py2.py3-none-any.whl (205kB)
+Collecting sqlparse>=0.2.0 (from django-debug-toolbar)
+  Downloading sqlparse-0.2.2-py2.py3-none-any.whl
+Collecting Django>=1.8 (from django-debug-toolbar)
+  Downloading Django-1.10.4-py2.py3-none-any.whl (6.8MB)
+Installing collected packages: sqlparse, Django, django-debug-toolbar
+Successfully installed Django-1.10.4 django-debug-toolbar-1.6 sqlparse-0.2.2

@@ -9,22 +9,22 @@ if os.path.isfile("LICENSE"):
 
 readme = ""
 
-if os.path.isfile("README.rst"):
-    with open("README.rst") as f:
+if os.path.isfile("README.md"):
+    with open("README.md") as f:
         readme = f.read()
 
 
 setup(
     zip_safe=False,
     name='django-debug-toolbar-http-client',
-    version='0.7',
+    version='0.1',
     packages=['http_client_panel', 'http_client_panel.panels'],
     package_data={'': ['templates/*']},
     url='https://github.com/hoffer2github/debug-toolbar-http-client',
     license=license,
     author='Hoffer',
     author_email='mhf.hust@gmail.com',
-    description='A django-debug-toolbar panel that shows you http cliernt request record',
+    description='A django-debug-toolbar panel that shows you http client request record',
     install_requires=['Django', 'django-debug-toolbar>=1.0', 'vcrpy==1.10.4'],
     classifiers=[
         'Environment :: Web Environment',

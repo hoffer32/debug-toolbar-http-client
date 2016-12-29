@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+django_debug_toolbar_http_client.egg-info/PKG-INFO
+django_debug_toolbar_http_client.egg-info/SOURCES.txt
+django_debug_toolbar_http_client.egg-info/dependency_links.txt
+django_debug_toolbar_http_client.egg-info/not-zip-safe
+django_debug_toolbar_http_client.egg-info/requires.txt
+django_debug_toolbar_http_client.egg-info/top_level.txt
+http_client_panel/__init__.py
+http_client_panel/panels/HttpClient.py
+http_client_panel/panels/__init__.py
+http_client_panel/templates/debug_toolbar_http_client.html
+http_client_panel/panels/HttpClient.py
+http_client_panel/panels/__init__.py
+http_client_panel/templates/debug_toolbar_http_client.html
