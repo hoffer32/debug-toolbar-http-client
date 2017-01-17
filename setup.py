@@ -17,7 +17,7 @@ if os.path.isfile("README.md"):
 setup(
     zip_safe=False,
     name='django-debug-toolbar-http-client',
-    version='0.1',
+    version='0.9',
     packages=['http_client_panel', 'http_client_panel.panels'],
     package_data={'': ['templates/*']},
     url='https://github.com/hoffer2github/debug-toolbar-http-client',
