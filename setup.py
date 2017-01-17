@@ -25,7 +25,7 @@ setup(
     author='Hoffer',
     author_email='mhf.hust@gmail.com',
     description='A django-debug-toolbar panel that shows you http client request record',
-    install_requires=['Django', 'django-debug-toolbar>=1.0', 'vcrpy==1.10.4'],
+    install_requires=['django-debug-toolbar>=1.0', 'vcrpy==1.10.4'],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
