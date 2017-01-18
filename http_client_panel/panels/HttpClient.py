@@ -17,7 +17,7 @@ class MemoryCassette(Cassette):
 
     @classmethod
     def save_cassette(cls, path, data, serializer=None):
-        cls._records[path] = zip(data["requests"], data["responses"])
+        cls._records[path] = data["requests"], data["responses"]
 
     @classmethod
     def load_cassette(cls, path, serializer=None):
