@@ -1,7 +1,7 @@
 Metadata-Version: 1.1
 Name: django-debug-toolbar-http-client
-Version: 0.7
-Summary: A django-debug-toolbar panel that shows you http cliernt request record
+Version: 0.94
+Summary: A django-debug-toolbar panel that shows you http client request record
 Home-page: https://github.com/hoffer2github/debug-toolbar-http-client
 Author: Hoffer
 Author-email: mhf.hust@gmail.com
@@ -26,7 +26,42 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-Description: UNKNOWN
+Description: # debug-toolbar-http-client
+        A django debug toolbar panel which records http requests made by app. It's simple base on [vcrpy](https://github.com/kevin1024/vcrpy) which will decompress “gzip” and “deflate” response bodies before recording
+        
+        ![alt tag](https://github.com/hoffer2github/debug-toolbar-http-client/blob/master/sample.png)
+        
+        
+        ##Usage
+        
+        ###. Install and configure [Django Debug Toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar)
+        
+        ###. Install Django Debug Toolbar HTTP Client Panel:
+        
+        ```
+            pip install django-debug-toolbar-http-client
+        ```
+        
+        ###. Add ``http_client_panel`` to your ``INSTALLED_APPS`` setting:
+        
+        ```
+        
+            INSTALLED_APPS = (
+                # ...
+                'http_client_panel',
+            )
+        ```
+        
+        ###. Add HTTP Client Panel to Django Debug Toolbar middleware:
+        
+        ```
+            MIDDLEWARE_CLASSES = (
+                ...
+                'http_client_panel.panels.HttpClient.HttpClientPanel',
+                ...
+            )
+        ```
+        
 Platform: UNKNOWN
 Classifier: Environment :: Web Environment
 Classifier: Framework :: Django
