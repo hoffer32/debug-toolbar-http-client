@@ -21,7 +21,7 @@ class MemoryCassette(Cassette):
 
     @classmethod
     def load_cassette(cls, path, serializer=None):
-        return cls._records.get(path, ([], []))
+        return cls._records.get(path, [[], []])
 
     def _save(self, force=False):
         if force or self.dirty:
@@ -85,14 +85,11 @@ class HttpClientPanel(Panel):
 
     def process_view(self, request, view_func, view_args, view_kwargs):
         args = (request, ) + view_args
-        # with CassetteContextDecorator(
-        #         MemoryCassette,
-        #         lambda: {"path": id(self),
-        #                  "record_mode": "all"}):
         with memory_vcr.use_cassette(path=str(id(self))):
             return view_func(*args, **view_kwargs)
 
     def generate_stats(self, request, response):
-        http_records = MemoryCassette.load_cassette(str(id(self)))
-        self.record_stats({'request_records': http_records})
+        requests, responses = MemoryCassette.load_cassette(str(id(self)))
+        self.record_stats({'request_records': zip(requests, responses)})
         return response
+

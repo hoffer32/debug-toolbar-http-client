@@ -9,28 +9,28 @@
         <col>
         <col>
     </colgroup>
-	<thead>
-		<tr>
-			<th>Request: Method</th>
-			<th>Request: Uri</th>
-			<th>Request: Headers</th>
-			<th>Request: Body</th>
-			<th>Response: Status</th>
-			<th>Response: Headers</th>
-			<th>Response: Body</th>
-		</tr>
-	</thead>
-	<tbody>
-		{% for request, response in request_records %}
-			<tr class="{% cycle 'djDebugOdd' 'djDebugEven' %} djDebugProfileRow{% for parent_id in call.parent_ids %} djToggleDetails_{{ parent_id }}{% endfor %}" depth="{{ call.depth }}">
-				<td>{{ request.method }}</td>
-				<td>{{ request.uri }}</td>
-				<td>{{ request.headers }}</td>
-				<td>{{ request.body }}</td>
-				<td>{{ response.status }}</td>
-				<td>{{ response.headers }}</td>
-				<td>{{ response.body }}</td>
-			</tr>
-		{% endfor %}
-	</tbody>
+    <thead>
+        <tr>
+          <th>Request: Method</th>
+          <th>Request: Uri</th>
+          <th>Request: Headers</th>
+          <th>Request: Body</th>
+          <th>Response: Status</th>
+          <th>Response: Headers</th>
+          <th>Response: Body</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for request, response in request_records %}
+        <tr class="{% cycle 'djDebugOdd' 'djDebugEven' %} djDebugProfileRow{% for parent_id in call.parent_ids %} djToggleDetails_{{ parent_id }}{% endfor %}" depth="{{ call.depth }}">
+          <td>{{ request.method }}</td>
+          <td>{{ request.uri }}</td>
+          <td>{{ request.headers }}</td>
+          <td>{{ request.body }}</td>
+          <td>{{ response.status }}</td>
+          <td>{{ response.headers }}</td>
+          <td>{{ response.body }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
 </table>
