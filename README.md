@@ -1,7 +1,7 @@
 # debug-toolbar-http-client
 A django debug toolbar panel which records http requests made by app. It's simple base on [vcrpy](https://github.com/kevin1024/vcrpy) which will decompress “gzip” and “deflate” response bodies before recording
 
-![alt tag](https://github.com/hoffer2github/debug-toolbar-http-client/blob/master/sample.png)
+![alt tag](https://github.com/hoffer2github/debug-toolbar-http-client/blob/master/http-client-panel.png)
 
 
 ##Usage
