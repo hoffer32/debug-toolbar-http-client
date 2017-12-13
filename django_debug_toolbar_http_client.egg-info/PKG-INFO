@@ -4,7 +4,6 @@ Version: 0.94
 Summary: A django-debug-toolbar panel that shows you http client request record
 Home-page: https://github.com/hoffer2github/debug-toolbar-http-client
 Author: Hoffer
-Author-email: mhf.hust@gmail.com
 License: The MIT License (MIT)
 
 Copyright (c) 2013 Tom Forbes
